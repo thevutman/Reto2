@@ -1,39 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto2</title>
-    <link rel="stylesheet" href="/Reto2/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a9f694e572.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main_container">
-        <h1>Reto 2</h1>
-        <h3>Estudiantes</h3>
-        <ul>
-            <li class="students"></li>
-            <li class="students"></li>
-            <li class="students"></li>
-            <li class="students"></li>
-        </ul>
-        <ul>
-            <li class="buttons" onclick="get_data()">Get</li>
-            <li class="buttons">Post</li>
-            <li class="buttons">Put</li>
-            <li class="buttons">Delete</li>
-        </ul>
+<div class="container" id="container">
+    <!-- **************************** || Motos || **************************** -->
+    <h1>MOTOCICLETA</h1>
+    <form action="" class="color">
+        <div>
+            <label for="reto2ID">ID:</label>
+            <input type="number" name="reto2ID" id="reto2ID_moto">
+        </div>
+        <div>
+            <label for="reto2BRAND">BRAND:</label>
+            <input type="text" name="reto2BRAND" id="reto2BRAND_moto">
+        </div>
+        <div>
+            <label for="reto2MODEL">MODEL:</label>
+            <input type="number" name="reto2MODEL" id="reto2MODEL_moto">
+        </div>
+        <div>
+            <label for="reto2CATEGORY.ID">CATEGORY.ID:</label>
+            <input type="number" name="reto2CATEGORY.ID" id="reto2CATEGORY_ID_moto">
+        </div>
+        <div>
+            <label for="reto2NAME">NAME:</label>
+            <input type="text" name="reto2NAME" id="reto2NAME_moto">
+        </div>
+        <div class="buttons">
+            <p onclick="get_moto()">Consultar</p>
+            <p onclick="push_moto()">Guardar</p>
+            <p onclick="put_moto()">Actualizar</p>
+        </div>
+    </form>
+<!-- **************************** || Cliente || **************************** -->
+    <h1>CLIENTE</h1>
+    <form action="" class="color">
+        <div>
+            <label for="reto2ID">ID:</label>
+            <input type="number" name="reto2ID" id="reto2ID_client">
+        </div>
+        <div>
+            <label for="reto2NAME">NAME:</label>
+            <input type="text" name="reto2NAME" id="reto2NAME_client">
+        </div>
+        <div>
+            <label for="reto2EMAIL">EMAIL:</label>
+            <input type="text" name="reto2EMAIL" id="reto2EMAIL_client">
+        </div>
+        <div>
+            <label for="reto2AGE">AGE:</label>
+            <input type="number" name="reto2AGE" id="reto2AGE_client">
+        </div>
+        <div class="buttons">
+            <p onclick="get_client()">Consultar</p>
+            <p onclick="push_client()">Guardar</p>
+            <p onclick="put_client()">Actualizar</p>
+        </div>
+    </form>
+<!-- **************************** || Message || **************************** -->
+    <h1>MENSAJE</h1>
+    <form action="" class="color">
+        <div>
+            <label for="reto2ID">ID:</label>
+            <input type="number" name="reto2ID" id="reto2ID_message">
+        </div>
+        <div>
+            <label for="reto2MESSAGETEXT">MESSAGETEXT:</label>
+            <input type="text" name="reto2MESSAGETEXT" id="reto2MESSAGETEXT_message">
+        </div>
+        <div class="buttons">
+            <p onclick="get_message()">Consultar</p>
+            <p onclick="push_message()">Guardar</p>
+            <p onclick="put_message()">Actualizar</p>
+        </div>
+    </form>
+</div>
+
+<!-- **************************** || Consulta || **************************** -->
+
+<div class="overlay" id="overlay">
+    <div id="consult" class="consult color">
+        <div class="header-consult">
+            <h2>Consulta</h2>
+            <i class="fa-solid fa-xmark" id="exit"></i>
+        </div>
+        <div class="tableContainer">
+            <table id="tablessss" class="respuesta"></table>
+        </div>
     </div>
-    <div class="get">
-        <div id="resultado"></div>
-    </div>
-    <div class="post">
-    </div>
-    <div class="put">
-    </div>
-    <div class="delete">
-    </div>
-    <script src="/Reto2/js/main.js"></script>
+</div>
+            
+<script src="./js/main.js"></script>
 </body>
+
 </html>
